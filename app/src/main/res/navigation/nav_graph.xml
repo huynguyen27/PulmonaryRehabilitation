@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/emailLoginActivity">
+
+    <fragment
+        android:id="@+id/emailRegisterActivity"
+        android:name="com.example.pulmonaryrehabilitation.activity.login.EmailRegisterActivity"
+        android:label="activity_email_register"
+        tools:layout="@layout/activity_email_register" >
+
+        </fragment>
+    <fragment
+        android:id="@+id/streakActivity"
+        android:name="com.example.pulmonaryrehabilitation.activity.streaks.StreakActivity"
+        android:label="activity_streaks_page"
+        tools:layout="@layout/activity_streaks_page" >
+
+        <action
+            android:id="@+id/action_streak_to_dashboard"
+            app:destination="@+id/dashboardActivity2"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/emailLoginActivity"
+        android:name="com.example.pulmonaryrehabilitation.activity.login.EmailLoginActivity"
+        android:label="activity_email_login"
+        tools:layout="@layout/activity_email_login" >
+
+        <action
+            android:id="@+id/action_login_to_register"
+            app:destination="@+id/emailRegisterActivity"
+            />
+
+        <action
+            android:id="@+id/action_login_to_dashboard"
+            app:destination="@+id/dashboardActivity2"
+            />
+
+    </fragment>
+    <fragment
+        android:id="@+id/dashboardActivity2"
+        android:name="com.example.pulmonaryrehabilitation.activity.dashboard.DashboardActivity"
+        android:label="activity_dashboard"
+        tools:layout="@layout/activity_dashboard2">
+
+        <action
+            android:id="@+id/action_dashboard_to_streaks"
+            app:destination="@+id/streakActivity"
+            />
+        <action
+            android:id="@+id/action_dashboard_to_exercisePlayer"
+            app:destination="@+id/exercisePlayerTapViewActivity"
+            />
+        <action
+            android:id="@+id/action_dashboard_to_exercisePlayerTimer"
+            app:destination="@+id/exercisePlayerTimerViewActivity"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/exercisePlayerTapViewActivity"
+        android:name="com.example.pulmonaryrehabilitation.activity.exerciseplayeractivity.ExercisePlayerTapViewActivity"
+        android:label="ExercisePlayerTapViewActivity" >
+        <action
+            android:id="@+id/action_exercise_to_dashboard"
+            app:destination="@+id/dashboardActivity2"
+            />
+
+    </fragment>
+    <fragment
+        android:id="@+id/exercisePlayerTimerViewActivity"
+        android:name="com.example.pulmonaryrehabilitation.activity.exerciseplayeractivity.ExercisePlayerTimerViewActivity"
+        android:label="activity_timer_exercise_player_view"
+        tools:layout="@layout/activity_timer_exercise_player_view" >
+
+        <action
+            android:id="@+id/action_exercise2_to_dashboard"
+            app:destination="@+id/dashboardActivity2"
+            />
+    </fragment>
+</navigation>

@@ -1,0 +1,5 @@
+id,name,activityType,exerciseList,completionProgress,description,currentExercise
+ba1,breathing-activity-week-1,breathing,bl1,0,breathing-activity-week-1,0
+ba2,breathing-activity-week-2,breathing,bl2,0,breathing-activity-week-2,0
+ba3,breathing-activity-week-3,breathing,bl3,0,breathing-activity-week-3,0
+ba4,breathing-activity-week-4,breathing,bl4,0,breathing-activity-week-4,0

@@ -1,0 +1,5 @@
+id,name,activityType,exerciseList,completionProgress,description,currentExercise
+ea1,endurance-activity-1,endurance,el1,0,endurance-activity-1,0
+ea2,endurance-activity-2,endurance,el2,0,endurance-activity-2,0
+ea3,endurance-activity-3,endurance,el3,0,endurance-activity-3,0
+ea4,endurance-activity-4,endurance,el4,0,endurance-activity-4,0

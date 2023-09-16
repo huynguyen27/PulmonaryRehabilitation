@@ -1,0 +1,5 @@
+id,name,activityType,exerciseList,completionProgress,description,currentExercise
+wa1,warmup-activity-week-1,warmup,wl1,0,warmup-activity-week-1,0
+wa2,warmup-activity-week-2,warmup,wl2,0,warmup-activity-week-2,0
+wa3,warmup-activity-week-3,warmup,wl3,0,warmup-activity-week-3,0
+wa4,warmup-activity-week-4,warmup,wl4,0,warmup-activity-week-4,0

@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="409dp"
+            android:layout_height="729dp"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/dashboardKebabMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_more_menu" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/questionnaireMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="150dp"
+                    android:layout_marginBottom="30dp"
+                    android:text="I have a question for you"
+                    android:textAlignment="gravity"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="#000000"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/questionnaireQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="17dp"
+                android:gravity="left"
+                android:text="Please rate your COPD symptoms"
+                android:textAlignment="gravity"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/cough"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="3dp"
+                android:gravity="left"
+                android:text="Cough"
+                android:textAlignment="gravity"
+                android:textColor="#000000"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/coughAnswerGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title">
+
+                <RadioButton
+                    android:id="@+id/cough0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/success_green"
+                    android:checked="true"
+                    android:text='0 ("I never cough")'
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/cough1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/dull_green"
+                    android:text="1"
+                    android:checked="false"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/cough2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/yellow"
+                    android:text="2"
+                    android:checked="false"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/cough3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/reddish_orange"
+                    android:text="3"
+                    android:checked="false"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/cough4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/indian_red"
+                    android:text="4"
+                    android:checked="false"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/cough5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/bright_red"
+                    android:text='5 ("I cough all the time")'
+                    android:checked="false"
+                    android:textStyle="bold" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/phlegm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="1dp"
+                android:gravity="left"
+                android:text="Phlegm"
+                android:textAlignment="gravity"
+                android:textColor="#000000"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/phlegmAnswerGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title">
+
+                <RadioButton
+                    android:id="@+id/phlegm0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/success_green"
+                    android:checked="true"
+                    android:text='0 ("I have no phlegm (mucus) in my chest at all")'
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/phlegm1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/dull_green"
+                    android:text="1"
+                    android:checked="false"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/phlegm2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/yellow"
+                    android:text="2"
+                    android:checked="false"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/phlegm3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/reddish_orange"
+                    android:text="3"
+                    android:checked="false"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/phlegm4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/indian_red"
+                    android:text="4"
+                    android:checked="false"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/phlegm5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/bright_red"
+                    android:text='5 ("My chest is completely full of phlegm (mucus)")'
+                    android:checked="false"
+                    android:textStyle="bold" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/chestTightness"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="3dp"
+                android:gravity="left"
+                android:text="Chest Tightness"
+                android:textAlignment="gravity"
+                android:textColor="#000000"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/chestTightnessAnswerGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title">
+
+                <RadioButton
+                    android:id="@+id/chestTightness0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/success_green"
+                    android:checked="true"
+                    android:text='0 ("My chest does not feel tight at all")'
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/chestTightness1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/dull_green"
+                    android:text="1"
+                    android:checked="false"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/chestTightness2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/yellow"
+                    android:text="2"
+                    android:checked="false"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/chestTightness3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/reddish_orange"
+                    android:checked="false"
+                    android:text="3"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/chestTightness4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/indian_red"
+                    android:checked="false"
+                    android:text="4"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/chestTightness5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/bright_red"
+                    android:checked="false"
+                    android:text='5 ("My chest feels very tight")'
+                    android:textStyle="bold" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/breathlessness"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="1dp"
+                android:gravity="left"
+                android:text="Breathlessness"
+                android:textAlignment="gravity"
+                android:textColor="#000000"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/breathlessnessAnswerGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title">
+
+                <RadioButton
+                    android:id="@+id/breathlessness0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/success_green"
+                    android:checked="true"
+                    android:text='0 ("When I walk up a hill or one flight of stairs I am not breathless")'
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/breathlessness1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:buttonTint="@color/dull_green"
+                    android:text="1"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/breathlessness2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/yellow"
+                    android:checked="false"
+                    android:text="2"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/breathlessness3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/reddish_orange"
+                    android:checked="false"
+                    android:text="3"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/breathlessness4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/indian_red"
+                    android:checked="false"
+                    android:text="4"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/breathlessness5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/bright_red"
+                    android:checked="false"
+                    android:text='5 ("When I walk up a hill or one flight of stairs I am very breathless")'
+                    android:textStyle="bold" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/activities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="1dp"
+                android:gravity="left"
+                android:text="Activities"
+                android:textAlignment="gravity"
+                android:textColor="#000000"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/activitiesAnswerGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title">
+
+                <RadioButton
+                    android:id="@+id/activities0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/success_green"
+                    android:checked="true"
+                    android:text='0 ("I am not limited doing any activities at home")'
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/activities1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/dull_green"
+                    android:checked="false"
+                    android:text="1"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/activities2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/yellow"
+                    android:checked="false"
+                    android:text="2"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/activities3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/reddish_orange"
+                    android:checked="false"
+                    android:text="3"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/activities4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/indian_red"
+                    android:checked="false"
+                    android:text="4"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/activities5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/bright_red"
+                    android:checked="false"
+                    android:text='5 ("I am very limited doing activities at home")'
+                    android:textStyle="bold" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/confidence"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="1dp"
+                android:gravity="left"
+                android:text="Confidence"
+                android:textAlignment="gravity"
+                android:textColor="#000000"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/confidenceAnswerGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title">
+
+                <RadioButton
+                    android:id="@+id/confidence0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/success_green"
+                    android:checked="true"
+                    android:text='0 ("I am confident leaving my home despite my lung condition")'
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/confidence1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:buttonTint="@color/dull_green"
+                    android:text="1"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/confidence2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:buttonTint="@color/yellow"
+                    android:text="2"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/confidence3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:buttonTint="@color/reddish_orange"
+                    android:text="3"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/confidence4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/indian_red"
+                    android:checked="false"
+                    android:text="4"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/confidence5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/bright_red"
+                    android:checked="false"
+                    android:text='5 ("I am not at all confident leaving my home despite my lung condition")'
+                    android:textStyle="bold" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/sleep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="1dp"
+                android:gravity="left"
+                android:text="Sleep"
+                android:textAlignment="gravity"
+                android:textColor="#000000"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/sleepAnswerGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title">
+
+                <RadioButton
+                    android:id="@+id/sleep0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/success_green"
+                    android:checked="true"
+                    android:text='0 ("I sleep soundly")'
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/sleep1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/dull_green"
+                    android:checked="false"
+                    android:text="1"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/sleep2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/yellow"
+                    android:checked="false"
+                    android:text="2"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/sleep3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:buttonTint="@color/reddish_orange"
+                    android:text="3"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/sleep4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/indian_red"
+                    android:checked="false"
+                    android:text="4"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/sleep5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/bright_red"
+                    android:checked="false"
+                    android:text='5 ("I do not sleep soundly because of my lungcondition")'
+                    android:textStyle="bold" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/energy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="1dp"
+                android:gravity="left"
+                android:text="Energy"
+                android:textAlignment="gravity"
+                android:textColor="#000000"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/energyAnswerGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title">
+
+                <RadioButton
+                    android:id="@+id/energy0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/success_green"
+                    android:checked="true"
+                    android:text='0 ("I have lots of energy")'
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/energy1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/dull_green"
+                    android:text="1"
+                    android:checked="false"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/energy2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/yellow"
+                    android:text="2"
+                    android:checked="false"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/energy3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/reddish_orange"
+                    android:text="3"
+                    android:checked="false"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/energy4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/indian_red"
+                    android:text="4"
+                    android:checked="false"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/energy5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/bright_red"
+                    android:text='5 ("I have no energy at all")'
+                    android:checked="false"
+                    android:textStyle="bold" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/totalscore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="1dp"
+                android:gravity="left"
+                android:text="Total Score: 0"
+                android:textAlignment="gravity"
+                android:textColor="#000000"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/submitcat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="28dp"
+                android:backgroundTint="@android:color/darker_gray"
+                android:text="Submit"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

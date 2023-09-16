@@ -1,0 +1,5 @@
+id,name,activityType,exerciseList,completionProgress,description,currentExercise
+sa1,strength-activity-week-1,strength,sl1,0,strength-activity-week-1,0
+sa2,strength-activity-week-2,strength,sl2,0,strength-activity-week-2,0
+sa3,strength-activity-week-3,strength,sl3,0,strength-activity-week-3,0
+sa4,strength-activity-week-4,strength,sl4,0,strength-activity-week-4,0
